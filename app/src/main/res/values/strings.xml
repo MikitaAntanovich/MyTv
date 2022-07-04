@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HorizontTV</string>
+    <string name="enter_number_your_phone">Введите номер вашего телефона</string>
+    <string name="support_phone">Телефон службы поддержки: <b>+7 495 123 45 67</b></string>
+    <string name="network_is_connected">Network is connected</string>
+    <string name="settings_network">Настроить</string>
+    <string name="start_number_identity_phone">+7</string>
+    <string name="network_not_found">Network not found</string>
+    <string name="need_network">Необходимо интернет-соединение</string>
+    <string name="no_limit">Закончился лимит на работу без доступа к интернету, необходимо подключение!</string>
+    <string name="connect">Подключить</string>
+    <string name="enter_correct_number">введите все 10 цифр номера телефона</string>
+    <string name="enter_correct_sms">введите все 4 цифры кода</string>
+    <string name="enter_sms">Введите код из СМС сообщения</string>
+    <string name="repeat_sms">Выслать повторно</string>
+    <string name="incorrect_sms_code">Код не совпадает (верно 1234)</string>
+    <string name="sms_send_again">Код отправлен повторно</string>
+    <string name="subscription">Подписка</string>
+    <string name="no_subs">У вас нет действующей подписки</string>
+    <string name="no_subs_explain">Возможно, не прошел платеж или вы еще не оплатили подписку. Перейдите на сайт, чтобы произвести оплату!</string>
+    <string name="choose_display">Выберите откуда выводить изображение на экран</string>
+    <string name="android_tv">Android TV</string>
+    <string name="hdmi_1">HDMI 1</string>
+    <string name="hdmi_2">HDMI 2</string>
+</resources>

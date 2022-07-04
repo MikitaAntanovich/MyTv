@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/enter_your_phone"
+        layout="@layout/enter_your_phone" />
+
+    <include
+        android:id="@+id/sms_layout"
+        layout="@layout/sms"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/no_subs_layout"
+        layout="@layout/no_subscription"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/subs_layout"
+        layout="@layout/subscription"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/network_not_found_layout"
+        layout="@layout/network_not_found"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/subscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/subscription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/internet_connection_plate"
+        layout="@layout/internet_connection_plate" />
+
+    <TextView
+        android:id="@+id/support_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/support_phone"
+        android:textAlignment="center"
+        android:textColor="@color/support"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
