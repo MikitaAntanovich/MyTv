@@ -22,4 +22,5 @@
     <string name="android_tv">Android TV</string>
     <string name="hdmi_1">HDMI 1</string>
     <string name="hdmi_2">HDMI 2</string>
+    <string name="back"><![CDATA[<]]></string>
 </resources>

@@ -1,7 +1,6 @@
 package com.horizont.mytv
 
 import android.Manifest
-import android.content.ComponentName
 import android.content.Intent
 import android.cultraview.tv.CtvCommon
 import android.cultraview.tv.CtvDataProvider
@@ -13,25 +12,30 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.view.View.VISIBLE
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.RecyclerView
+import com.horizont.mytv.adapter.AdapterOutputSignal
+import com.horizont.mytv.interfaces.IOutputSignalListener
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-
-class MainActivity : FragmentActivity() {
+class MainActivity : FragmentActivity(), IOutputSignalListener {
 
     private lateinit var phoneNumber: EditText
     private lateinit var plateNetwork: ImageView
+    private lateinit var settingNetwork: Button
     private lateinit var networkName: TextView
     private lateinit var yourPhoneLayout: ConstraintLayout
     private lateinit var smsLayout: ConstraintLayout
     private lateinit var subscription: CheckBox
+    private var recyclerViewOutputSignal: RecyclerView? = null
 
-    //    private lateinit var sourceList: ArrayList<CtvSource>
+    private lateinit var sourceList: ArrayList<CtvSource>
     private var noNetwork: Boolean = false
     private var enterSmsLayout: Boolean = false
 
@@ -39,10 +43,10 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-//        sourceList = CtvCommon.getInstance().sourceList
-//
-//        startLiveTv(sourceList[0])
+        sourceList = CtvCommon.getInstance().sourceList
+        recyclerViewOutputSignal = findViewById(R.id.output_variants)
+        recyclerViewOutputSignal?.adapter =
+            AdapterOutputSignal(sourceList, this)
 
         subscription = findViewById(R.id.subscription)
         subscription.setOnClickListener {
@@ -61,7 +65,7 @@ class MainActivity : FragmentActivity() {
 
         phoneNumber = findViewById(R.id.identity_number)
 
-        val phoneOk: ImageView = findViewById(R.id.btn_phone_ok)
+        val phoneOk: ImageButton = findViewById(R.id.btn_phone_ok)
         phoneOk.setOnClickListener { checkInternet() }
 
         ActivityCompat.requestPermissions(
@@ -80,7 +84,8 @@ class MainActivity : FragmentActivity() {
 //        }
 
         plateNetwork = findViewById(R.id.internet_connection)
-        plateNetwork.setOnClickListener { openNetworkSettings() }
+        settingNetwork = findViewById(R.id.settings_network)
+        settingNetwork.setOnClickListener { openNetworkSettings() }
         setNetworkStatus(NetworkManager.isNetworkAvailable(this))
         checkNetwork()
     }
@@ -130,10 +135,10 @@ class MainActivity : FragmentActivity() {
         networkIs: Int
     ) {
         val networkStatus: TextView = findViewById(R.id.network_status)
-        val settingsNetwork: TextView = findViewById(R.id.settings_network)
+//        val settingsNetwork: TextView = findViewById(R.id.settings_network)
 
         if (!networkStatus.text.equals(resources.getText(networkIs))) {
-            settingsNetwork.setTextColor(resources.getColor(network, theme))
+//            settingsNetwork.setTextColor(resources.getColor(network, theme))
             plateNetwork.setImageResource(rectanglePlateNetwork)
             networkStatus.text = resources.getText(networkIs)
             if (connected)
@@ -162,8 +167,8 @@ class MainActivity : FragmentActivity() {
 
     private fun setSMSLayout(sms: Boolean, phone: Boolean) {
         val noSubsLayout: ConstraintLayout = findViewById(R.id.no_subs_layout)
-        val checkSms: ImageView = findViewById(R.id.btn_sms_ok)
-        val smsBackup: ImageView = findViewById(R.id.sms_backup)
+        val checkSms: ImageButton = findViewById(R.id.btn_sms_ok)
+        val smsBackup: ImageButton = findViewById(R.id.sms_backup)
         smsBackup.setOnClickListener { setSMSLayout(false, true) }
 
         if (sms) {
@@ -278,5 +283,13 @@ class MainActivity : FragmentActivity() {
         )
         val jsonAbout = Json.encodeToString(u)
         Log.i("network_ok", jsonAbout)
+    }
+
+    fun onBackPressed(view: View) {
+        onBackPressed()
+    }
+
+    override fun onCLickOutputSignal(numOutput: Int) {
+        Log.i("onCLickOutputSignal", numOutput.toString())
     }
 }

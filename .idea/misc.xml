@@ -5,23 +5,29 @@
       <map>
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_connect.xml" value="0.24" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_connect_light.xml" value="0.2625" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_identity_number.xml" value="0.24" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_internet_connection.xml" value="0.24" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_network_not_found.xml" value="0.24" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_network_ok.xml" value="0.24" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_repeat_sms.xml" value="0.24" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable-v24/rectangle_plate_settings_network.xml" value="0.24" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable/btn_back.xml" value="0.196" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable/btn_internet_settings.xml" value="0.213" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable/btn_output_signal.xml" value="0.2625" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/drawable/btn_phone_ok.xml" value="0.1955" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/activity_main.xml" value="0.31040564373897706" />
-        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/enter_your_phone.xml" value="0.75" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/enter_your_phone.xml" value="0.33" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/identity.xml" value="0.33" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/internet_connection.xml" value="0.8890290037831021" />
-        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/internet_connection_plate.xml" value="0.9" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/internet_connection_plate.xml" value="1.1377672209026128" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/network_not_found.xml" value="0.33" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/no_subscription.xml" value="0.33" />
-        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/sms.xml" value="0.67" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/output_item.xml" value="0.22707231040564374" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/sms.xml" value="0.5" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/subsLayout.xml" value="0.19797178130511464" />
         <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/subs_layout.xml" value="0.25" />
-        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/subscription.xml" value="0.31040564373897706" />
+        <entry key="..\:/Android Studio/MyTv/app/src/main/res/layout/subscription.xml" value="0.25" />
       </map>
     </option>
   </component>

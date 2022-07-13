@@ -30,25 +30,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.25" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/sms_backup"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="20dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/backup"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:onClick="onBackPressed"
+        android:scaleX=".4"
+        android:scaleY=".4"
+        android:src="@drawable/btn_back"
         app:layout_constraintBottom_toBottomOf="@id/sms_code"
         app:layout_constraintEnd_toStartOf="@id/sms_code"
         app:layout_constraintTop_toTopOf="@id/sms_code" />
+
 
     <EditText
         android:id="@+id/sms_code"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:maxLength="4"
-        android:inputType="number"
         android:background="@drawable/rectangle_plate_identity_number"
+        android:inputType="number"
+        android:maxLength="4"
         android:padding="8dp"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -57,13 +60,14 @@
         app:layout_constraintTop_toBottomOf="@id/enter_number_your_phone"
         app:layout_constraintWidth_percent="0.12" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/btn_sms_ok"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/phone_ok"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:scaleX=".4"
+        android:scaleY=".4"
+        android:src="@drawable/btn_phone_ok"
         app:layout_constraintBottom_toBottomOf="@id/sms_code"
         app:layout_constraintStart_toEndOf="@id/sms_code"
         app:layout_constraintTop_toTopOf="@id/sms_code" />
@@ -72,17 +76,17 @@
         android:id="@+id/repeat_sms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangle_plate_repeat_sms"
-        android:text="@string/repeat_sms"
         android:layout_marginTop="26dp"
+        android:background="@drawable/rectangle_plate_repeat_sms"
+        android:paddingStart="22dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="12dp"
+        android:text="@string/repeat_sms"
         android:textColor="@color/white"
         android:textSize="12sp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:paddingStart="22dp"
-        android:paddingEnd="22dp"
-        app:layout_constraintTop_toBottomOf="@id/sms_code"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sms_code" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
